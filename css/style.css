@@ -5,6 +5,11 @@
 /*========================================================
                     Main layout styles
 =========================================================*/
+.camera-wrapper{
+  background-color: black ;
+}
+
+
 #a{
   color: #ff33cc;
 }
@@ -113,7 +118,7 @@ img {
 }
 /*============  Backgrounds  =============*/
 .bg_1 {
-  background: #fdfdfc;
+  background: black;
 }
 /*============  Floats  =============*/
 .put-left {
