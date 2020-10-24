@@ -6,14 +6,14 @@
 html {
   box-sizing: border-box;
 }
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 div {
   text-align: justify;
   text-justify: inter-word;
 }
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
 .column {
   float: left;
   width: 25%;
@@ -31,6 +31,7 @@ div {
   .column {
     width: 100%;
     display: block;
+
   }
   .column1 {
     width: 100%;
@@ -71,26 +72,34 @@ div {
 .button:hover {
   background-color: #555;
 }
-#more {
-display:none;
-  }
-#mybtn {
-    background:none;
-    border:none;
-    margin:0;
-    padding:0;
-    cursor: pointer;
-  }
-  #more2 {
-display:none;
-  }
-#mybtn2 {
-    background:none;
-    border:none;
-    margin:0;
-    padding:0;
-    cursor: pointer;
-  }
+#box p{
+font-size: 15px;
+line-height: 28px ;
+height: 300px;
+overflow: hidden;
+
+}
+#box.showContent p{
+  height: auto;
+}
+#box.showContent a.readmore-btn{
+  background-color: red;
+
+
+}
+#box a{
+
+  display: inline-block;
+  color: #fff;
+  background-color: #2196f3;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-top: 15px; 
+}
+#box a:hover{
+  box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+}
 </style>
 </head>
 <body>
@@ -98,12 +107,12 @@ display:none;
         <div class="column1">
           <div class="card">
           <div class="row">
-            <div class="column1">
+            <div class="column1" id="box">
                 <p style="width: 100%;">Thank you for visiting Equaलिंग!<br>
 
 Despite the expeditious growth of feminism as a movement in the past two decades or so, the issues of gender roles, gender socialization and rape culture largely remain understated. The focus continues to remain on the atrocities committed against women when it is about time that it shifted to the deep rooted, discriminatory and patriarchal attitude of the society which eventually perpetuates the former. <br>
 
-On a detailed evaluation, it can be easily noticed that any abhorred action of an individual is often the exaggerated version of their systematically<span id="dots">...</span><span id="more">
+On a detailed evaluation, it can be easily noticed that any abhorred action of an individual is often the exaggerated version of their systematically 
  ignored problematic behaviours enabled by the society-fed bigotry. I, thus, believe that a change in the societal structure and notions must be our 
  first step as change makers in order to ensure a safe, healthy environment for all individuals. It is only when we challenge gender roles that we can 
 ensure equal economic and social opportunities for all people. It is only when we challenge the rape culture that we can stop the rapes. It is only when 
@@ -112,23 +121,9 @@ we challenge misogyny that we can end domestic and sexual abuse. <br>
 Equaलिंग is our small initiative to educate the future torch bearers of our society and direct them towards the right path.
 The aim is to make people aware and kind and accepting and respectful, and also to provide them with a safe haven where they
 can be their raw, fresh and unapologetic selves. Let us all come together and build a society that we always envisioned for the young us!<br>
-                  </span></p><button onclick="myfxn1()" id="mybtn">read more</button>
-              <script>
-              function myfxn1(){
-              var dots = document.getElementById("dots");
-              var moreText = document.getElementById("more");
-              var btnText = document.getElementById("mybtn");
-              if(dots.style.display === "none"){
-                 dots.style.display = "inline";
-                 btnText.innerHTML = "Read more";
-                 moreText.style.display = "none";
-              } else {
-                 dots.style.display = "none";
-                 btnText.innerHTML = "Read less";
-                 moreText.style.display = "inline";
-             }
-              }
-              </script>
+ </p>
+  <a href="javascript:void();" class="readmore-btn"> Read More</a>
+
             </div>
             <div class="column1">
                 <img src="/images/anushka.jpg" alt="Jane" style="width:100%">
@@ -144,36 +139,22 @@ can be their raw, fresh and unapologetic selves. Let us all come together and bu
         <div class="column1">
             <div class="card">
             <div class="row">
-              <div class="column1">
+              <div class="column1" id="box">
                   <p style="width: 100%;">Welcome to Equaलिंग!<br>
 When someone read from the Political Science textbook that liberty is freedom to do anything that does not harm someone else’s liberty, my little brain was fascinated. <br>
 Growing up in the society that we live in, childhood is inherently a self-labelling, gendered and overtly 
-                    conscious process for most people, and so was it for me.  My brain slowly began to come
+                    conscious process for most people, and so was it for me. <br>
+                     My brain slowly began to come
                     to terms with the fact that all the differences within every brain around it and the differences
                     in the bodies of each individual around the globe are essential parts to diversity in humanity,
                     and their expression is not only valid but beautifully essential. Queer-phobia, misogyny,
-                    femme-phobia<span id="dots2">...</span><span id="more2">, trans-phobia, contempt for sexual -promiscuousness, and idolization of the typical masculine and (or) feminine, 
+                    femme-phobia, trans-phobia, contempt for sexual -promiscuousness, and idolization of the typical masculine and (or) feminine, 
                     were childhood treasures tough to abandon, and are still not completely lost. Maybe they never will be. The attempt of the individual
                     however is to admit, acknowledge and strive for change. And that is what would be the summary of our objectives here at Equaलिंग. 
                     <br>
 Looking forward to a freer world. Cheers!
-                    </span></p><button onclick="myfxn2()" id="mybtn2">read more</button>
-                <script>
-              function myfxn2(){
-              var dots = document.getElementById("dots2");
-              var moreText = document.getElementById("more2");
-              var btnText = document.getelEmentById("mybtn2");
-              if(dots.style.display === "none"){
-                 dots.style.display = "inline";
-                 btnText.innerHTML = "Read more";
-                 moreText.style.display = "none";
-              } else {
-                 dots.style.display = "none";
-                 btnText.innerHTML = "Read less";
-                 moreText.style.display = "inline";
-             }
-              }
-              </script>
+ </p>
+ <a href="javascript:void();" class="readmore-btn"> Read More</a>
               </div>
               <div class="column1">
                   <img src="/images/tanmay2.jpg" alt="Image not loaded" style="width:100%">
@@ -186,6 +167,18 @@ Looking forward to a freer world. Cheers!
             </div>
           </div>
       </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script >
+        $(".readmore-btn").on('click',function(){
+          $(this).parent().toggleClass("showContent");
+
+          var replaceText=$(this).parent().hasClass("showContent") ? "Read Less":"Read More" ;
+          $(this).text(replaceText);
+        })
+      </script>
+
+
+      <div>
 
 </body>
 </html>
